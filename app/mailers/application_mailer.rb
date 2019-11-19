@@ -1,4 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  #pretending to send mail as we dont have an smtp server
+  default to: "info@pcbuilds.com", from: "info@pcbuilds.com"
   layout 'mailer'
 end

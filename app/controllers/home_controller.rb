@@ -16,6 +16,7 @@ class HomeController < ApplicationController
       flash[:alert] = I18n.t('home.request_contact.no_email')
     else
       #send an email
+      ContactMailer.contact_email(email, name, telephone, message).deliver_now
       flash[:notice] = I18n.t('home.request_contact.email_sent')
     end
     #re display the root path- no view needed
