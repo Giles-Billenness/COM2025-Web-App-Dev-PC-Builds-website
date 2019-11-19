@@ -32,3 +32,8 @@
 en:
   app_title: "PCBuilds"
   app_description: "A website dedicated to glorifying metal"
+
+  home:
+    home:
+      title: PC Builds
+      welcome: Welcome to Giles' Pc Builds website!
