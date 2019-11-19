@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  app_title: "PCBuilds"
+  app_description: "A website dedicated to glorifying metal"
