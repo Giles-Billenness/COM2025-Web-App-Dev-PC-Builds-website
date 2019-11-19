@@ -16,5 +16,8 @@
     = csrf_meta_tags
 
   %body
-
+  = render 'shared/header'
+  %div.jumbotron.text-center
     = yield
+
+  = render 'shared/footer'
