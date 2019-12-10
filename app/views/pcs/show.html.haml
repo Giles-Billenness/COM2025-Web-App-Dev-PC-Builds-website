@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Motherboard:
+  = @pc.Motherboard
+%p
+  %b Cpucooler:
+  = @pc.CpuCooler
+%p
+  %b Case:
+  = @pc.Case
+%p
+  %b Powersupply:
+  = @pc.PowerSupply
+%p
+  %b Storage:
+  = @pc.Storage
+%p
+  %b Price:
+  = @pc.Price
+%p
+  %b Description:
+  = @pc.Description
+%p
+  %b Date:
+  = @pc.Date
+
+= link_to 'Edit', edit_pc_path(@pc)
+\|
+= link_to 'Back', pcs_path

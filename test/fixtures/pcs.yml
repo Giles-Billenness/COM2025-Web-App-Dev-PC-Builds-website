@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Motherboard: MyText
+  CpuCooler: MyText
+  Case: MyText
+  PowerSupply: MyText
+  Storage: MyText
+  Price: 9.99
+  Description: MyText
+  Date: 2019-12-10 19:11:40
+
+two:
+  Motherboard: MyText
+  CpuCooler: MyText
+  Case: MyText
+  PowerSupply: MyText
+  Storage: MyText
+  Price: 9.99
+  Description: MyText
+  Date: 2019-12-10 19:11:40

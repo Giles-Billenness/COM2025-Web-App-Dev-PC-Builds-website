@@ -1,0 +1,35 @@
+%h1 Listing pcs
+
+%table
+  %thead
+    %tr
+      %th Motherboard
+      %th Cpucooler
+      %th Case
+      %th Powersupply
+      %th Storage
+      %th Price
+      %th Description
+      %th Date
+      %th
+      %th
+      %th
+
+  %tbody
+    - @pcs.each do |pc|
+      %tr
+        %td= pc.Motherboard
+        %td= pc.CpuCooler
+        %td= pc.Case
+        %td= pc.PowerSupply
+        %td= pc.Storage
+        %td= pc.Price
+        %td= pc.Description
+        %td= pc.Date
+        %td= link_to 'Show', pc
+        %td= link_to 'Edit', edit_pc_path(pc)
+        %td= link_to 'Destroy', pc, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Pc', new_pc_path
