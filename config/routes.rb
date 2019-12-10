@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cpus
   resources :pcs
   #get 'home/home'
   root 'home#home'
