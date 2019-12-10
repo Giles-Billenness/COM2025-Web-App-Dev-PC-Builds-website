@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th Name
       %th Motherboard
       %th Cpucooler
       %th Case
@@ -18,6 +19,7 @@
   %tbody
     - @pcs.each do |pc|
       %tr
+        %td= pc.Name
         %td= pc.Motherboard
         %td= pc.CpuCooler
         %td= pc.Case

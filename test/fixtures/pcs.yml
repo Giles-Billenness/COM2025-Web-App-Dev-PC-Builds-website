@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  Name: MyText
   Motherboard: MyText
   CpuCooler: MyText
   Case: MyText
@@ -8,9 +9,10 @@ one:
   Storage: MyText
   Price: 9.99
   Description: MyText
-  Date: 2019-12-10 19:11:40
+  Date: 2019-12-10 19:28:20
 
 two:
+  Name: MyText
   Motherboard: MyText
   CpuCooler: MyText
   Case: MyText
@@ -18,4 +20,4 @@ two:
   Storage: MyText
   Price: 9.99
   Description: MyText
-  Date: 2019-12-10 19:11:40
+  Date: 2019-12-10 19:28:20

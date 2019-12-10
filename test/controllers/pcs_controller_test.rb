@@ -17,7 +17,7 @@ class PcsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create pc" do
     assert_difference('Pc.count') do
-      post pcs_url, params: { pc: { Case: @pc.Case, CpuCooler: @pc.CpuCooler, Date: @pc.Date, Description: @pc.Description, Motherboard: @pc.Motherboard, PowerSupply: @pc.PowerSupply, Price: @pc.Price, Storage: @pc.Storage } }
+      post pcs_url, params: { pc: { Case: @pc.Case, CpuCooler: @pc.CpuCooler, Date: @pc.Date, Description: @pc.Description, Motherboard: @pc.Motherboard, Name: @pc.Name, PowerSupply: @pc.PowerSupply, Price: @pc.Price, Storage: @pc.Storage } }
     end
 
     assert_redirected_to pc_url(Pc.last)
@@ -34,7 +34,7 @@ class PcsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update pc" do
-    patch pc_url(@pc), params: { pc: { Case: @pc.Case, CpuCooler: @pc.CpuCooler, Date: @pc.Date, Description: @pc.Description, Motherboard: @pc.Motherboard, PowerSupply: @pc.PowerSupply, Price: @pc.Price, Storage: @pc.Storage } }
+    patch pc_url(@pc), params: { pc: { Case: @pc.Case, CpuCooler: @pc.CpuCooler, Date: @pc.Date, Description: @pc.Description, Motherboard: @pc.Motherboard, Name: @pc.Name, PowerSupply: @pc.PowerSupply, Price: @pc.Price, Storage: @pc.Storage } }
     assert_redirected_to pc_url(@pc)
   end
 

@@ -19,6 +19,7 @@ class PcsTest < ApplicationSystemTestCase
     fill_in "Date", with: @pc.Date
     fill_in "Description", with: @pc.Description
     fill_in "Motherboard", with: @pc.Motherboard
+    fill_in "Name", with: @pc.Name
     fill_in "Powersupply", with: @pc.PowerSupply
     fill_in "Price", with: @pc.Price
     fill_in "Storage", with: @pc.Storage
@@ -37,6 +38,7 @@ class PcsTest < ApplicationSystemTestCase
     fill_in "Date", with: @pc.Date
     fill_in "Description", with: @pc.Description
     fill_in "Motherboard", with: @pc.Motherboard
+    fill_in "Name", with: @pc.Name
     fill_in "Powersupply", with: @pc.PowerSupply
     fill_in "Price", with: @pc.Price
     fill_in "Storage", with: @pc.Storage
