@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :central_processing_units
   #get 'home/home'
   root 'home#home'
   #route to contact page, home controller#contact page

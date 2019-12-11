@@ -1,0 +1,16 @@
+= form_for @central_processing_unit do |f|
+  - if @central_processing_unit.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@central_processing_unit.errors.count, "error")} prohibited this central_processing_unit from being saved:"
+      %ul
+        - @central_processing_unit.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :ChipMake
+    = f.text_area :ChipMake
+  .field
+    = f.label :ChipModel
+    = f.text_area :ChipModel
+  .actions
+    = f.submit 'Save'

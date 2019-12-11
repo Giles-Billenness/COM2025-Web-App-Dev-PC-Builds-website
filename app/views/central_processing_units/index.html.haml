@@ -1,0 +1,23 @@
+%h1 Listing central_processing_units
+
+%table
+  %thead
+    %tr
+      %th Chipmake
+      %th Chipmodel
+      %th
+      %th
+      %th
+
+  %tbody
+    - @central_processing_units.each do |central_processing_unit|
+      %tr
+        %td= central_processing_unit.ChipMake
+        %td= central_processing_unit.ChipModel
+        %td= link_to 'Show', central_processing_unit
+        %td= link_to 'Edit', edit_central_processing_unit_path(central_processing_unit)
+        %td= link_to 'Destroy', central_processing_unit, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Central processing unit', new_central_processing_unit_path

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Chipmake:
+  = @central_processing_unit.ChipMake
+%p
+  %b Chipmodel:
+  = @central_processing_unit.ChipModel
+
+= link_to 'Edit', edit_central_processing_unit_path(@central_processing_unit)
+\|
+= link_to 'Back', central_processing_units_path
