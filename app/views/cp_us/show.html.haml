@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Chipmake:
+  = @cpu.ChipMake
+%p
+  %b Chipmodel:
+  = @cpu.ChipModel
+
+= link_to 'Edit', edit_cpu_path(@cpu)
+\|
+= link_to 'Back', cpus_path

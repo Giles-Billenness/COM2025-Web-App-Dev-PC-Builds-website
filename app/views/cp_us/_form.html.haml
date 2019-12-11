@@ -1,0 +1,16 @@
+= form_for @cpu do |f|
+  - if @cpu.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@cpu.errors.count, "error")} prohibited this cpu from being saved:"
+      %ul
+        - @cpu.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :ChipMake
+    = f.text_area :ChipMake
+  .field
+    = f.label :ChipModel
+    = f.text_area :ChipModel
+  .actions
+    = f.submit 'Save'
