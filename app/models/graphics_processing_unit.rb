@@ -1,0 +1,2 @@
+class GraphicsProcessingUnit < ApplicationRecord
+end

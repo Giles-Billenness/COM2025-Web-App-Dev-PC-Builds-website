@@ -1,0 +1,19 @@
+= form_for @graphics_processing_unit do |f|
+  - if @graphics_processing_unit.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@graphics_processing_unit.errors.count, "error")} prohibited this graphics_processing_unit from being saved:"
+      %ul
+        - @graphics_processing_unit.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :AfterMarketMake
+    = f.text_area :AfterMarketMake
+  .field
+    = f.label :ChipMake
+    = f.text_area :ChipMake
+  .field
+    = f.label :ChipModel
+    = f.text_area :ChipModel
+  .actions
+    = f.submit 'Save'

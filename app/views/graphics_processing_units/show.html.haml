@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Aftermarketmake:
+  = @graphics_processing_unit.AfterMarketMake
+%p
+  %b Chipmake:
+  = @graphics_processing_unit.ChipMake
+%p
+  %b Chipmodel:
+  = @graphics_processing_unit.ChipModel
+
+= link_to 'Edit', edit_graphics_processing_unit_path(@graphics_processing_unit)
+\|
+= link_to 'Back', graphics_processing_units_path

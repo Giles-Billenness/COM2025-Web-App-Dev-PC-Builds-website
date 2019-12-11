@@ -1,0 +1,1 @@
+json.partial! "graphics_processing_units/graphics_processing_unit", graphics_processing_unit: @graphics_processing_unit

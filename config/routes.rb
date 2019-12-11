@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :graphics_processing_units
   resources :central_processing_units
   #get 'home/home'
   root 'home#home'

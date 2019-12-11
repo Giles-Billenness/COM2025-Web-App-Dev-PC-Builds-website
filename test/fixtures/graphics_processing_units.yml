@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  AfterMarketMake: MyText
+  ChipMake: MyText
+  ChipModel: MyText
+
+two:
+  AfterMarketMake: MyText
+  ChipMake: MyText
+  ChipModel: MyText

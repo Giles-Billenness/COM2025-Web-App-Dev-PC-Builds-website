@@ -1,0 +1,25 @@
+%h1 Listing graphics_processing_units
+
+%table
+  %thead
+    %tr
+      %th Aftermarketmake
+      %th Chipmake
+      %th Chipmodel
+      %th
+      %th
+      %th
+
+  %tbody
+    - @graphics_processing_units.each do |graphics_processing_unit|
+      %tr
+        %td= graphics_processing_unit.AfterMarketMake
+        %td= graphics_processing_unit.ChipMake
+        %td= graphics_processing_unit.ChipModel
+        %td= link_to 'Show', graphics_processing_unit
+        %td= link_to 'Edit', edit_graphics_processing_unit_path(graphics_processing_unit)
+        %td= link_to 'Destroy', graphics_processing_unit, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Graphics processing unit', new_graphics_processing_unit_path
