@@ -10,20 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_10_192820) do
-
-  create_table "pcs", force: :cascade do |t|
-    t.text "Name", null: false
-    t.text "Motherboard", null: false
-    t.text "CpuCooler", null: false
-    t.text "Case", null: false
-    t.text "PowerSupply", null: false
-    t.text "Storage", null: false
-    t.decimal "Price"
-    t.text "Description"
-    t.datetime "Date", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
