@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :cpus
   #get 'home/home'
   root 'home#home'
   #route to contact page, home controller#contact page
