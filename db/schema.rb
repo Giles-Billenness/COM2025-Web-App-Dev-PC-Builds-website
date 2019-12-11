@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_11_180941) do
+ActiveRecord::Schema.define(version: 2019_12_11_190020) do
 
   create_table "central_processing_units", force: :cascade do |t|
+    t.text "ChipMake", null: false
+    t.text "ChipModel", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "graphics_processing_units", force: :cascade do |t|
+    t.text "AfterMarketMake", null: false
     t.text "ChipMake", null: false
     t.text "ChipModel", null: false
     t.datetime "created_at", null: false
