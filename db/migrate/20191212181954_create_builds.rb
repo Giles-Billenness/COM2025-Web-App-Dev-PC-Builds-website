@@ -5,5 +5,6 @@ class CreateBuilds < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+    add_column :builds, :cpu_id, :integer
   end
 end
