@@ -18,13 +18,16 @@
  @import "bootstrap";
 
  $font: 'Times New Roman', 'Times', serif;
-$color: #FFFFFF;
-body {
-font-family: $font;
-background-color: $color;
-margin: 10px;
-padding: 10px;
-}
-h1 {
-text-transform: uppercase;
-}
+ $color: #FFFFFF;
+ body {
+   font-family: $font;
+   background-color: $color;
+   margin: 10px;
+   padding: 10px;
+ }
+ h1 {
+   text-transform: uppercase;
+ }
+ a:hover {
+   background-color: lightgrey;
+ }
