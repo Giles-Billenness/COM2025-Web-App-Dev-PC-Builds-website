@@ -3,4 +3,8 @@ class CentralProcessingUnit < ApplicationRecord
   validates :ChipModel, presence: true
   #validates :ChipModel, uniqueness: true
   has_many :Build
+
+
+
+
 end

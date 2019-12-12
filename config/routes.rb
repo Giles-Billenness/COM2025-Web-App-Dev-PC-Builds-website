@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :builds
   resources :graphics_processing_units
   resources :central_processing_units
