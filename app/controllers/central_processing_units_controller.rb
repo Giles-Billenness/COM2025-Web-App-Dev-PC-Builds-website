@@ -1,6 +1,9 @@
 class CentralProcessingUnitsController < ApplicationController
   before_action :set_central_processing_unit, only: [:show, :edit, :update, :destroy]
 
+  def ChipMake
+    @central_processing_units = CentralProcessingUnit.all.ChipMake
+  end
   # GET /central_processing_units
   # GET /central_processing_units.json
   def index

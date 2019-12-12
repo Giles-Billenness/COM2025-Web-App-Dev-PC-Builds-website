@@ -15,10 +15,12 @@ class BuildsController < ApplicationController
   # GET /builds/new
   def new
     @build = Build.new
+    @cpu = CentralProcessingUnit.all.map{|i| [i.ChipMake, i.id]}
   end
 
   # GET /builds/1/edit
   def edit
+    @cpu = CentralProcessingUnit.all.map{|i| [i.ChipMake, i.id]}
   end
 
   # POST /builds
@@ -69,6 +71,6 @@ class BuildsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def build_params
-      params.require(:build).permit(:title)
+      params.require(:build).permit(:title, :cpu_id)
     end
 end

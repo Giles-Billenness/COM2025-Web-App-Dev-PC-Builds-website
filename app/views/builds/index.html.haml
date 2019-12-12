@@ -4,6 +4,7 @@
   %thead
     %tr
       %th Title
+      %th Cpu
       %th
       %th
       %th
@@ -12,6 +13,8 @@
     - @builds.each do |build|
       %tr
         %td= build.title
+        %td= build.cpu_id
+
         %td= link_to 'Show', build
         %td= link_to 'Edit', edit_build_path(build)
         %td= link_to 'Destroy', build, method: :delete, data: { confirm: 'Are you sure?' }
