@@ -15,12 +15,12 @@ class BuildsController < ApplicationController
   # GET /builds/new
   def new
     @build = Build.new
-    @cpu = CentralProcessingUnit.all.map{|i| [i.ChipMake, i.id]}
+    @cpu = CentralProcessingUnit.all.map{|i| [i.chipmake, i.id]}
   end
 
   # GET /builds/1/edit
   def edit
-    @cpu = CentralProcessingUnit.all.map{|i| [i.ChipMake, i.id]}
+    @cpu = CentralProcessingUnit.all.map{|i| [i.chipmake, i.id]}
   end
 
   # POST /builds

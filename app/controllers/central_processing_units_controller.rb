@@ -1,9 +1,9 @@
 class CentralProcessingUnitsController < ApplicationController
   before_action :set_central_processing_unit, only: [:show, :edit, :update, :destroy]
 
-  def ChipMake
-    @central_processing_units = CentralProcessingUnit.all.ChipMake
-  end
+  # def chipmake
+  #   @central_processing_units = CentralProcessingUnit.all.chipmake
+  # end
   # GET /central_processing_units
   # GET /central_processing_units.json
   def index
@@ -35,7 +35,7 @@ class CentralProcessingUnitsController < ApplicationController
         format.json { render :show, status: :created, location: @central_processing_unit }
       else
         format.html { render :new }
-        format.json { render json: @central_processing_unit.errors, status: :unprocessable_entity }
+        format.json { render json: @central_procechipmakessing_unit.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -72,6 +72,6 @@ class CentralProcessingUnitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def central_processing_unit_params
-      params.require(:central_processing_unit).permit(:ChipMake, :ChipModel)
+      params.require(:central_processing_unit).permit(:chipmake, :chipmodel)
     end
 end

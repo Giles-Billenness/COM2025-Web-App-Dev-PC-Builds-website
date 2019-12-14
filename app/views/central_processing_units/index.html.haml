@@ -12,8 +12,8 @@
   %tbody
     - @central_processing_units.each do |central_processing_unit|
       %tr
-        %td= central_processing_unit.ChipMake
-        %td= central_processing_unit.ChipModel
+        %td= central_processing_unit.chipmake
+        %td= central_processing_unit.chipmodel
         %td= link_to 'Show', central_processing_unit
         %td= link_to 'Edit', edit_central_processing_unit_path(central_processing_unit)
         %td= link_to 'Destroy', central_processing_unit, method: :delete, data: { confirm: 'Are you sure?' }

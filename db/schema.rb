@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_12_214335) do
+ActiveRecord::Schema.define(version: 2019_12_14_181633) do
 
   create_table "builds", force: :cascade do |t|
     t.string "title"
@@ -20,16 +20,16 @@ ActiveRecord::Schema.define(version: 2019_12_12_214335) do
   end
 
   create_table "central_processing_units", force: :cascade do |t|
-    t.text "ChipMake", null: false
-    t.text "ChipModel", null: false
+    t.text "chipmake", null: false
+    t.text "chipmodel", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "graphics_processing_units", force: :cascade do |t|
-    t.text "AfterMarketMake", null: false
-    t.text "ChipMake", null: false
-    t.text "ChipModel", null: false
+    t.text "aftermarketmake", null: false
+    t.text "chipmake", null: false
+    t.text "chipmodel", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
