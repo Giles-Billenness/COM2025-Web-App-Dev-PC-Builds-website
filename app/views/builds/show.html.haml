@@ -13,6 +13,9 @@
   - (0..3).each do |i|
     =GraphicsProcessingUnit.where(id: @build.gpu_id).pluck(:aftermarketmake, :chipmake, :chipmodel)[0][i]
 
+  %b description:
+  =@build.description
+
 = link_to 'Edit', edit_build_path(@build)
 \|
 = link_to 'Back', builds_path

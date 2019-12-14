@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_14_203913) do
+ActiveRecord::Schema.define(version: 2019_12_14_220430) do
 
   create_table "builds", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_12_14_203913) do
     t.datetime "updated_at", null: false
     t.integer "cpu_id"
     t.integer "gpu_id"
+    t.text "description"
   end
 
   create_table "central_processing_units", force: :cascade do |t|

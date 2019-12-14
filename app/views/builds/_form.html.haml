@@ -21,6 +21,9 @@
     -# displays a dropdown menu to select a cpu storing its id
     = collection_select( :build, :gpu_id, GraphicsProcessingUnit.all, :id, :formatted_select_text_gpu)
 
+  .field
+    = f.label :description
+    = f.text_field :description
 
   .actions
     = f.submit 'Save'
