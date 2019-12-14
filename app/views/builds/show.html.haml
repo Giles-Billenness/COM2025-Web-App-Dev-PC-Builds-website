@@ -4,7 +4,11 @@
   %b Title:
   = @build.title
   %b Cpu:
-  = @build.cpu_id
+  - (0..2).each do |i|
+    =CentralProcessingUnit.where(id: @build.cpu_id).pluck(:ChipMake, :ChipModel)[0][i]
+
+  -# = for(int i; i<=3 i++){
+  -# CentralProcessingUnit.where(id: @build.cpu_id).pluck(:ChipMake, :ChipModel)[0][1]
 
 = link_to 'Edit', edit_build_path(@build)
 \|

@@ -5,13 +5,13 @@
       %ul
         - @build.errors.full_messages.each do |message|
           %li= message
-
   .field
     = f.label :title
     = f.text_field :title
 
   .field
-
-    = collection_select( :build, :cpu_id, CentralProcessingUnit.all, :id, :ChipModel  , {}, { :multiple => false } )
+    -# - type = :ChipModel+:ChipMake  :formatted_select_text
+    -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
+    = collection_select( :build, :cpu_id, CentralProcessingUnit.all, :id, :formatted_select_text)
   .actions
     = f.submit 'Save'
