@@ -12,6 +12,15 @@
   .field
     -# - type = :ChipModel+:ChipMake  :formatted_select_text
     -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
-    = collection_select( :build, :cpu_id, CentralProcessingUnit.all, :id, :formatted_select_text)
+    -# displays a dropdown menu to select a cpu storing its id
+    = collection_select( :build, :cpu_id, CentralProcessingUnit.all, :id, :formatted_select_text_cpu)
+
+  .field
+    -# - type = :ChipModel+:ChipMake  :formatted_select_text
+    -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
+    -# displays a dropdown menu to select a cpu storing its id
+    = collection_select( :build, :gpu_id, GraphicsProcessingUnit.all, :id, :formatted_select_text_gpu)
+
+
   .actions
     = f.submit 'Save'

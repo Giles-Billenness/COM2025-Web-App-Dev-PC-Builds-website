@@ -5,7 +5,7 @@
     %tr
       %th Title
       %th Cpu
-      %th
+      %th Gpu
       %th
       %th
 
@@ -13,8 +13,8 @@
     - @builds.each do |build|
       %tr
         %td= build.title
-        %td= CentralProcessingUnit.where(id: build.cpu_id).pluck(:chipmake, :chipmodel)[0][0..1]
-        %td= link_to 'Show', build
+        %td= CentralProcessingUnit.where(id: build.cpu_id).pluck(:chipmake, :chipmodel)[0]
+        %td= GraphicsProcessingUnit.where(id: build.gpu_id).pluck(:aftermarketmake ,:chipmake, :chipmodel)[0]
         %td= link_to 'Edit', edit_build_path(build)
         %td= link_to 'Destroy', build, method: :delete, data: { confirm: 'Are you sure?' }
 
