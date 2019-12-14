@@ -69,6 +69,6 @@ class GraphicsProcessingUnitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def graphics_processing_unit_params
-      params.require(:graphics_processing_unit).permit(:AfterMarketMake, :ChipMake, :ChipModel)
+      params.require(:graphics_processing_unit).permit(:aftermarketmake, :chipmake, :chipmodel)
     end
 end

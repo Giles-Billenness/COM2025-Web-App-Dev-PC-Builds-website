@@ -13,9 +13,9 @@
   %tbody
     - @graphics_processing_units.each do |graphics_processing_unit|
       %tr
-        %td= graphics_processing_unit.AfterMarketMake
-        %td= graphics_processing_unit.ChipMake
-        %td= graphics_processing_unit.ChipModel
+        %td= graphics_processing_unit.aftermarketmake
+        %td= graphics_processing_unit.chipmake
+        %td= graphics_processing_unit.chipmodel
         %td= link_to 'Show', graphics_processing_unit
         %td= link_to 'Edit', edit_graphics_processing_unit_path(graphics_processing_unit)
         %td= link_to 'Destroy', graphics_processing_unit, method: :delete, data: { confirm: 'Are you sure?' }

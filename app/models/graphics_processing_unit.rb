@@ -1,5 +1,5 @@
 class GraphicsProcessingUnit < ApplicationRecord
-  validates :AfterMarketMake, presence: true
-  validates :ChipMake, presence: true
-  validates :ChipModel, presence: true
+  validates :aftermarketmake, presence: true
+  validates :chipmake, presence: true
+  validates :chipmodel, presence: true
 end

@@ -22,13 +22,13 @@
         %li.nav-item
           %a.nav-link{href: "http://localhost:3000/contact"} Contact
         %li.nav-item
-          %a.nav-link{href: "http://localhost:3000/central_processing_units"} central_processing_units
+          %a.nav-link{href: "http://localhost:3000/builds"} Builds
         %li.nav-item.dropdown
           %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", href: "#"}
             Dropdown link
           .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
             %a.dropdown-item{href: "http://localhost:3000/graphics_processing_units"} graphics_processing_units
-            %a.dropdown-item{href: "#"} Another action
+            %a.dropdown-item{href: "http://localhost:3000/central_processing_units"} central_processing_units
             %a.dropdown-item{href: "#"} Something else here
         %p.navbar-text.float-right
           - if user_signed_in?
@@ -45,6 +45,6 @@
 
 
 
-
--flash.each do |key, value|
-  = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
+-# one less flash up prompt
+-# -flash.each do |key, value|
+-#   = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?

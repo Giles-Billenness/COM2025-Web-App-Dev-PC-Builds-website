@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-welcome=CentralProcessingUnit.where(ChipModel:'3900X').first
+welcome=CentralProcessingUnit.where(chipmodel:'3900X').first
 welcome.delete if welcome
-CentralProcessingUnit.create([ChipMake:'AMD', ChipModel:'3900X'])
+CentralProcessingUnit.create([chipmake:'AMD', chipmodel:'3900X'])
