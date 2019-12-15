@@ -69,6 +69,6 @@ class RandomAccessMemoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def random_access_memory_params
-      params.fetch(:random_access_memory, {})
+      params.require(:random_access_memory).permit(:rammake, :ddr, :mhz, :size)
     end
 end

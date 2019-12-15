@@ -1,5 +1,17 @@
 %p#notice= notice
 
+%p
+  %b Ram Make:
+  = @random_access_memory.rammake
+%p
+  %b DDR:
+  = @random_access_memory.ddr
+%p
+  %b Mhz:
+  = @random_access_memory.mhz
+%p
+  %b Size:
+  = @random_access_memory.size
 
 = link_to 'Edit', edit_random_access_memory_path(@random_access_memory)
 \|

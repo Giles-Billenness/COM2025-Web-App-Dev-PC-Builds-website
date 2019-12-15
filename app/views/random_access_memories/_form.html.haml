@@ -6,5 +6,21 @@
         - @random_access_memory.errors.full_messages.each do |message|
           %li= message
 
+
+  .field
+    = f.label :rammake
+    = f.text_area :rammake
+  .field
+    = f.label :ddr
+    = f.select :ddr, RandomAccessMemory.ddr_types.values.to_a
+
+  .field
+    = f.label :mhz
+    = f.select :mhz, RandomAccessMemory.mhz_types.values.to_a
+
+  .field
+    = f.label :size
+    = f.select :size, RandomAccessMemory.size_types.values.to_a
+
   .actions
     = f.submit 'Save'

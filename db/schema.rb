@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_161631) do
+ActiveRecord::Schema.define(version: 2019_12_15_171145) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -53,6 +53,15 @@ ActiveRecord::Schema.define(version: 2019_12_15_161631) do
     t.text "aftermarketmake", null: false
     t.text "chipmake", null: false
     t.text "chipmodel", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "random_access_memories", force: :cascade do |t|
+    t.text "rammake", null: false
+    t.text "ddr", null: false
+    t.text "mhz", null: false
+    t.integer "size", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

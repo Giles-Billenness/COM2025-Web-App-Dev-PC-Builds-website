@@ -3,6 +3,10 @@
 %table
   %thead
     %tr
+      %th Make
+      %th DDR type
+      %th Mhz
+      %th Size
       %th
       %th
       %th
@@ -10,6 +14,10 @@
   %tbody
     - @random_access_memories.each do |random_access_memory|
       %tr
+        %td= random_access_memory.rammake
+        %td= random_access_memory.ddr
+        %td= random_access_memory.mhz
+        %td= random_access_memory.size
         %td= link_to 'Show', random_access_memory
         %td= link_to 'Edit', edit_random_access_memory_path(random_access_memory)
         %td= link_to 'Destroy', random_access_memory, method: :delete, data: { confirm: 'Are you sure?' }
