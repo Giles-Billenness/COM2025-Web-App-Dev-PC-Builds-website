@@ -10,6 +10,10 @@
     = f.text_field :title
 
   .field
+    = "upload a pic"
+    = f.file_field :picture
+
+  .field
     -# - type = :ChipModel+:ChipMake  :formatted_select_text
     -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
     -# displays a dropdown menu to select a cpu storing its id

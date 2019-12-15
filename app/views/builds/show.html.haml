@@ -3,6 +3,10 @@
 %p
   %b Title:
   = @build.title
+
+  %b Picture:
+  = image_tag(@build.picture, size: "400x250")
+
   %b Cpu:
   - (0..2).each do |i|
     =CentralProcessingUnit.where(id: @build.cpu_id).pluck(:chipmake, :chipmodel)[0][i]
