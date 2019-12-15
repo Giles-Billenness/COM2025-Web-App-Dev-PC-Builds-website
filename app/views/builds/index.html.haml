@@ -6,6 +6,7 @@
       %th Title
       %th Cpu
       %th Gpu
+      %th Ram
       %th description
       %th
 
@@ -15,6 +16,7 @@
         %td= build.title
         %td= CentralProcessingUnit.where(id: build.cpu_id).pluck(:chipmake, :chipmodel)[0]
         %td= GraphicsProcessingUnit.where(id: build.gpu_id).pluck(:aftermarketmake ,:chipmake, :chipmodel)[0]
+        %td= RandomAccessMemory.where(id: build.ram_id).pluck(:rammake ,:ddr, :mhz, :size)[0]
         %td=build.description
         %td= link_to 'Show', build
         %td= link_to 'Edit', edit_build_path(build)

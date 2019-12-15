@@ -2,6 +2,7 @@ class RandomAccessMemory < ApplicationRecord
   validates :rammake, presence: true
   validates :ddr, presence: true
   validates :mhz, presence: true
+  has_many :Build
 
   enum ddr_types:{
     ddrfour: "ddr4",
@@ -25,5 +26,8 @@ class RandomAccessMemory < ApplicationRecord
       onetwentyeight: "128gb"
       }
 
+    def formatted_select_text_ram
+      "#{rammake}  #{ddr}  #{mhz} #{size}"
+    end
 
 end

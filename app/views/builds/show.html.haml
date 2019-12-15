@@ -17,6 +17,10 @@
   - (0..3).each do |i|
     =GraphicsProcessingUnit.where(id: @build.gpu_id).pluck(:aftermarketmake, :chipmake, :chipmodel)[0][i]
 
+  %b Ram:
+  - (0..3).each do |i|
+    =RandomAccessMemory.where(id: @build.ram_id).pluck(:rammake ,:ddr, :mhz, :size)[0][i]
+
   %b description:
   =@build.description
 

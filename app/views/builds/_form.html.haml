@@ -26,6 +26,11 @@
     = collection_select( :build, :gpu_id, GraphicsProcessingUnit.all, :id, :formatted_select_text_gpu)
 
   .field
+    -# - type = :ChipModel+:ChipMake  :formatted_select_text
+    -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
+    -# displays a dropdown menu to select a cpu storing its id
+    = collection_select( :build, :ram_id, RandomAccessMemory.all, :id, :formatted_select_text_ram)
+  .field
     = f.label :description
     = f.text_field :description
 

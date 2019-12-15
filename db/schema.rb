@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_171145) do
+ActiveRecord::Schema.define(version: 2019_12_15_182752) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_12_15_171145) do
     t.integer "cpu_id"
     t.integer "gpu_id"
     t.text "description"
+    t.integer "ram_id"
   end
 
   create_table "central_processing_units", force: :cascade do |t|
@@ -61,7 +62,7 @@ ActiveRecord::Schema.define(version: 2019_12_15_171145) do
     t.text "rammake", null: false
     t.text "ddr", null: false
     t.text "mhz", null: false
-    t.integer "size", null: false
+    t.text "size", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
