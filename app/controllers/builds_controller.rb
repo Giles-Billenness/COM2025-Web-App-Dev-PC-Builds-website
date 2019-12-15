@@ -1,6 +1,6 @@
 class BuildsController < ApplicationController
   before_action :set_build, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:new, :edit]
   # GET /builds
   # GET /builds.json
   def index
@@ -15,14 +15,14 @@ class BuildsController < ApplicationController
   # GET /builds/new
   def new
     @build = Build.new
-    @cpu = CentralProcessingUnit.all.map{|i| [i.chipmake, i.id]}
-    @gpu = GraphicsProcessingUnit.all.map{|i| [i.chipmake, i.id]}
+    # @cpu = CentralProcessingUnit.all.map{|i| [i.chipmake, i.id]}
+    # @gpu = GraphicsProcessingUnit.all.map{|i| [i.chipmake, i.id]}
   end
 
   # GET /builds/1/edit
   def edit
-    @cpu = CentralProcessingUnit.all.map{|i| [i.chipmake, i.id]}
-    @gpu = GraphicsProcessingUnit.all.map{|i| [i.chipmake, i.id]}
+    # @cpu = CentralProcessingUnit.all.map{|i| [i.chipmake, i.id]}
+    # @gpu = GraphicsProcessingUnit.all.map{|i| [i.chipmake, i.id]}
   end
 
   # POST /builds
@@ -73,6 +73,6 @@ class BuildsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def build_params
-      params.require(:build).permit(:title, :cpu_id, :gpu_id,:ram_id, :description, :picture, :motherboard,:cpu_cooler,:case,:power_supply,:storage)
+      params.require(:build).permit(:title, :cpu_id, :gpu_id,:ram_id, :description, :picture, :motherboard,:cpu_cooler,:case,:power_supply,:storage, :user_id)
     end
 end

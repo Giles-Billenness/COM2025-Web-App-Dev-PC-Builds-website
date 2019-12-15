@@ -33,7 +33,7 @@
   .field
     = f.label :motherboard
     = f.text_field :motherboard
-  .field
+  .fieldcurrent_user.email
     = f.label :cpu_cooler
     = f.text_field :cpu_cooler
   .field
@@ -47,8 +47,9 @@
     = f.label :storage
     = f.text_field :storage
 
-
-
+    =f.label :user_id
+    -# =f.select(:user_id=current_user.id)
+    = f.select :user_id, [["Your user id", current_user.id]]
 
 
   .field

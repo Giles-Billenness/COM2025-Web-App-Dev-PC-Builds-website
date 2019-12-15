@@ -51,7 +51,8 @@
     = image_tag(@build.picture, size: "400x250")
   .col-md-8
     .build-info
-      %h2.build-title= @build.title
+      %h2.build-title=  @build.title
+      %h2.build-user= "Made by user :#{User.where(id: @build.user_id).pluck(:email)[0]}"
       %h3.build-cpu
         %span Cpu:
         - (0..2).each do |i|
@@ -89,7 +90,7 @@
       %div
         -# = link_to "Add Review", new_build_review_path(@build), class: "btn-custom"
 .links.btn-group
-  = link_to "Back", root_path, class: "btn btn-custom"
+  = link_to "Back", builds_path, class: "btn btn-custom"
   - if user_signed_in?
     -# - if @build.user_id == current_user.id
       = link_to "Edit", edit_build_path(@build), class: "btn btn-custom"
