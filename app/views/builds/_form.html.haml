@@ -31,6 +31,27 @@
     -# displays a dropdown menu to select a cpu storing its id
     = collection_select( :build, :ram_id, RandomAccessMemory.all, :id, :formatted_select_text_ram)
   .field
+    = f.label :motherboard
+    = f.text_field :motherboard
+  .field
+    = f.label :cpu_cooler
+    = f.text_field :cpu_cooler
+  .field
+    = f.label :case
+    = f.text_field :case
+
+  .field
+    = f.label :power_supply
+    = f.text_field :power_supply
+  .field
+    = f.label :storage
+    = f.text_field :storage
+
+
+
+
+
+  .field
     = f.label :description
     = f.text_field :description
 

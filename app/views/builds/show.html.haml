@@ -24,6 +24,73 @@
   %b description:
   =@build.description
 
+  %b motherboard:
+  =@build.motherboard
+
+  %b cpu_cooler:
+  =@build.cpu_cooler
+
+  %b case:
+  =@build.case
+
+  %b power_supply:
+  =@build.power_supply
+
+  %b storage:
+  =@build.storage
+
+
 = link_to 'Edit', edit_build_path(@build)
 \|
 = link_to 'Back', builds_path
+
+
+
+.row
+  .col-md-4
+    = image_tag(@build.picture, size: "400x250")
+  .col-md-8
+    .build-info
+      %h2.build-title= @build.title
+      %h3.build-cpu
+        %span Cpu:
+        - (0..2).each do |i|
+          =CentralProcessingUnit.where(id: @build.cpu_id).pluck(:chipmake, :chipmodel)[0][i]
+      %h4.build-gpu
+        - (0..3).each do |i|
+          =GraphicsProcessingUnit.where(id: @build.gpu_id).pluck(:aftermarketmake, :chipmake, :chipmodel)[0][i]
+      %h5.build-Ram
+        - (0..3).each do |i|
+          =RandomAccessMemory.where(id: @build.ram_id).pluck(:rammake ,:ddr, :mhz, :size)[0][i]
+      %h5.build-motherboard
+        =@build.motherboard
+      %h5.build-cpu_cooler
+        =@build.cpu_cooler
+      %h5.build-case
+        =@build.case
+      %h5.build-power_supply
+        =@build.power_supply
+      %h5.build-storage
+        =@build.storage
+
+
+
+      %h2.avg-rating Average Rating
+      .average-review-rating{"data-score" => "<haml_loud"} @average_review &gt;
+      %span.number-of-reviews
+        -# Based on #{@build.reviews.count} reviews
+      %p.build-desc= @build.description
+.row
+  .col-md-4
+    .reviews
+      / Where the reviews/ratings will go
+      %h1 Reviews
+      -# = render @build.reviews
+      %div
+        -# = link_to "Add Review", new_build_review_path(@build), class: "btn-custom"
+.links.btn-group
+  = link_to "Back", root_path, class: "btn btn-custom"
+  - if user_signed_in?
+    -# - if @build.user_id == current_user.id
+      = link_to "Edit", edit_build_path(@build), class: "btn btn-custom"
+      = link_to "Delete", build_path(@build), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom"

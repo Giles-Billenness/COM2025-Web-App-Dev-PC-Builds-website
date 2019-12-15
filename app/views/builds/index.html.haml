@@ -24,6 +24,18 @@
 
 %br
 
+
+
+-# %h1.current-category= params[:category]
+-# - if @books.count == 0
+-#   %h1 There are no books currently in this category
+-# - else
+.row
+  - @builds.each do |build|
+    .col-md-3
+      %a{href: "/builds/#{build.id}"}
+        = image_tag(build.picture, size: "400x250")
+
 = link_to 'New Build', new_build_path
 -#
 -# -show_cpu_info(){

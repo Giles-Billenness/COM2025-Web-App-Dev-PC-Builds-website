@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_182752) do
+ActiveRecord::Schema.define(version: 2019_12_15_184358) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -41,6 +41,11 @@ ActiveRecord::Schema.define(version: 2019_12_15_182752) do
     t.integer "gpu_id"
     t.text "description"
     t.integer "ram_id"
+    t.text "motherboard"
+    t.text "cpu_cooler"
+    t.text "case"
+    t.text "power_supply"
+    t.text "storage"
   end
 
   create_table "central_processing_units", force: :cascade do |t|
