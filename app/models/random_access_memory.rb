@@ -1,0 +1,2 @@
+class RandomAccessMemory < ApplicationRecord
+end

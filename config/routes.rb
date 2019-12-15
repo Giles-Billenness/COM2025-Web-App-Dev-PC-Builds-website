@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :random_access_memories
   devise_for :users
   resources :builds
   resources :graphics_processing_units

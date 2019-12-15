@@ -1,0 +1,10 @@
+= form_for @random_access_memory do |f|
+  - if @random_access_memory.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@random_access_memory.errors.count, "error")} prohibited this random_access_memory from being saved:"
+      %ul
+        - @random_access_memory.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

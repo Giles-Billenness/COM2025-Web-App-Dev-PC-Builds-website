@@ -1,0 +1,19 @@
+%h1 Listing random_access_memories
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @random_access_memories.each do |random_access_memory|
+      %tr
+        %td= link_to 'Show', random_access_memory
+        %td= link_to 'Edit', edit_random_access_memory_path(random_access_memory)
+        %td= link_to 'Destroy', random_access_memory, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Random access memory', new_random_access_memory_path
