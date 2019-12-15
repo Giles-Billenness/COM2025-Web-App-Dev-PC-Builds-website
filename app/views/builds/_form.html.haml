@@ -1,60 +1,62 @@
-= form_for @build do |f|
-  - if @build.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@build.errors.count, "error")} prohibited this build from being saved:"
-      %ul
-        - @build.errors.full_messages.each do |message|
-          %li= message
-  .field
-    = f.label :title
-    = f.text_field :title
+.new-build-form
+  = form_for @build do |f|
+    - if @build.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@build.errors.count, "error")} prohibited this build from being saved:"
+        %ul
+          - @build.errors.full_messages.each do |message|
+            %li= message
 
-  .field
-    = "upload a pic"
-    = f.file_field :picture
+    .field
+      = f.label :title
+      = f.text_field :title
 
-  .field
-    -# - type = :ChipModel+:ChipMake  :formatted_select_text
-    -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
-    -# displays a dropdown menu to select a cpu storing its id
-    = collection_select( :build, :cpu_id, CentralProcessingUnit.all, :id, :formatted_select_text_cpu)
+    .field
+      = "upload a pic"
+      = f.file_field :picture
 
-  .field
-    -# - type = :ChipModel+:ChipMake  :formatted_select_text
-    -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
-    -# displays a dropdown menu to select a cpu storing its id
-    = collection_select( :build, :gpu_id, GraphicsProcessingUnit.all, :id, :formatted_select_text_gpu)
+    .field
+      -# - type = :ChipModel+:ChipMake  :formatted_select_text
+      -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
+      -# displays a dropdown menu to select a cpu storing its id
+      = collection_select( :build, :cpu_id, CentralProcessingUnit.all, :id, :formatted_select_text_cpu)
 
-  .field
-    -# - type = :ChipModel+:ChipMake  :formatted_select_text
-    -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
-    -# displays a dropdown menu to select a cpu storing its id
-    = collection_select( :build, :ram_id, RandomAccessMemory.all, :id, :formatted_select_text_ram)
-  .field
-    = f.label :motherboard
-    = f.text_field :motherboard
-  .fieldcurrent_user.email
-    = f.label :cpu_cooler
-    = f.text_field :cpu_cooler
-  .field
-    = f.label :case
-    = f.text_field :case
+    .field
+      -# - type = :ChipModel+:ChipMake  :formatted_select_text
+      -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
+      -# displays a dropdown menu to select a cpu storing its id
+      = collection_select( :build, :gpu_id, GraphicsProcessingUnit.all, :id, :formatted_select_text_gpu)
 
-  .field
-    = f.label :power_supply
-    = f.text_field :power_supply
-  .field
-    = f.label :storage
-    = f.text_field :storage
+    .field
+      -# - type = :ChipModel+:ChipMake  :formatted_select_text
+      -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
+      -# displays a dropdown menu to select a cpu storing its id
+      = collection_select( :build, :ram_id, RandomAccessMemory.all, :id, :formatted_select_text_ram)
+    .field
+      = f.label :motherboard
+      = f.text_field :motherboard
+    .field
+      = f.label :cpu_cooler
+      = f.text_field :cpu_cooler
+    .field
+      = f.label :case
+      = f.text_field :case
 
-    =f.label :user_id
-    -# =f.select(:user_id=current_user.id)
-    = f.select :user_id, [["Your user id", current_user.id]]
+    .field
+      = f.label :power_supply
+      = f.text_field :power_supply
+    .field
+      = f.label :storage
+      = f.text_field :storage
+    .field-hide
+      =f.label :user_id
+      -# =f.select(:user_id=current_user.id)
+      = f.select :user_id, [["Your user id", current_user.id]]
 
 
-  .field
-    = f.label :description
-    = f.text_field :description
+    .field
+      = f.label :description
+      = f.text_field :description
 
-  .actions
-    = f.submit 'Save'
+    .actions
+      = f.submit 'Save' , :class => 'btn-custom2'
