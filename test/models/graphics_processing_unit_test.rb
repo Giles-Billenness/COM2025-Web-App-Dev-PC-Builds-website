@@ -11,7 +11,11 @@ class GraphicsProcessingUnitTest < ActiveSupport::TestCase
 end
 
   test "should save gpu" do
-  pc1=GraphicsProcessingUnit.create([AfterMarketMake:'Msi', ChipMake:'Nvidia', ChipModel:'1080ti'])
+  pc1=GraphicsProcessingUnit.new
+  pc1.aftermarketmake= 'Msi'
+  pc1.chipmake = 'Nvidia'
+  pc1.chipmodel = '1080ti'
+  #([AfterMarketMake:'Msi', ChipMake:'Nvidia', ChipModel:'1080ti'])
   pc1.save #fix this one!!!!!!!!!!!!!!!!!!!!!!!
   assert pc1.valid?
 end

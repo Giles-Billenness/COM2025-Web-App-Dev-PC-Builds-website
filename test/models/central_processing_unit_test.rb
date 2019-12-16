@@ -11,7 +11,10 @@ class CentralProcessingUnitTest < ActiveSupport::TestCase
 end
 
   test "should save cpu" do
-  pc1=CentralProcessingUnit.create([ChipMake:'AMD', ChipModel:'3900X'])
+  pc1=CentralProcessingUnit.new
+  pc1.chipmake = 'AMD'
+  pc1.chipmodel='3900X'
+  # ([chipmake:'AMD', chipmodel:'3900X'])
   pc1.save #fix this one!!!!!!!!!!!!!!!!!!!!!!!
   assert pc1.valid?
 end

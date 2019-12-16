@@ -3,6 +3,7 @@ require 'test_helper'
 class RandomAccessMemoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @random_access_memory = random_access_memories(:one)
+
   end
 
   test "should get index" do
@@ -17,7 +18,7 @@ class RandomAccessMemoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create random_access_memory" do
     assert_difference('RandomAccessMemory.count') do
-      post random_access_memories_url, params: { random_access_memory: {  } }
+      post random_access_memories_url, params: { random_access_memory: { rammake: @random_access_memory.rammake, ddr: @random_access_memory.ddr, mhz: @random_access_memory.mhz, size: @random_access_memory.size} }
     end
 
     assert_redirected_to random_access_memory_url(RandomAccessMemory.last)
@@ -34,7 +35,7 @@ class RandomAccessMemoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update random_access_memory" do
-    patch random_access_memory_url(@random_access_memory), params: { random_access_memory: {  } }
+    patch random_access_memory_url(@random_access_memory), params: { random_access_memory: {rammake: @random_access_memory.rammake, ddr: @random_access_memory.ddr, mhz: @random_access_memory.mhz, size: @random_access_memory.size } }
     assert_redirected_to random_access_memory_url(@random_access_memory)
   end
 

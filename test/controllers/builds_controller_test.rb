@@ -17,7 +17,7 @@ class BuildsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create build" do
     assert_difference('Build.count') do
-      post builds_url, params: { build: { title: @build.title } }
+      post builds_url, params: { build: { title: @build.title, cpu_id: @build.cpu_id, gpu_id: @build.gpu_id, description: @build.description, ram_id: @build.ram_id, motherboard: @build.motherboard, cpu_cooler: @build.cpu_cooler, case: @build.case,  power_supply: @build.power_supply, storage: @build.storage, user_id: @build.user_id} }
     end
 
     assert_redirected_to build_url(Build.last)
@@ -34,7 +34,7 @@ class BuildsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update build" do
-    patch build_url(@build), params: { build: { title: @build.title } }
+    patch build_url(@build), params: { build: { title: @build.title, cpu_id: @build.cpu_id, gpu_id: @build.gpu_id, description: @build.description, ram_id: @build.ram_id, motherboard: @build.motherboard, cpu_cooler: @build.cpu_cooler, case: @build.case,  power_supply: @build.power_supply, storage: @build.storage, user_id: @build.user_id } }
     assert_redirected_to build_url(@build)
   end
 

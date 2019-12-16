@@ -48,7 +48,8 @@
 
 .row
   .col-md-4
-    = image_tag(@build.picture, size: "400x250", class: "build-show")
+    = image_tag(@build.picture, size: "400x250", class: "build-show") if @build.picture.attached?
+
   .col-md-8
     .build-info
       %h2.build-title=  @build.title

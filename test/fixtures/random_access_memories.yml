@@ -4,8 +4,17 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+one:
+  rammake: test1
+  ddr: ddr4
+  mhz: 3000
+  size: 16gb
 # column: value
 #
-two: {}
+
+two:
+  rammake: test2
+  ddr: ddr3
+  mhz: 3600
+  size: 8gb
 # column: value

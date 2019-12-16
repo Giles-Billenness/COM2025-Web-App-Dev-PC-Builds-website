@@ -17,7 +17,8 @@ class GraphicsProcessingUnitsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create graphics_processing_unit" do
     assert_difference('GraphicsProcessingUnit.count') do
-      post graphics_processing_units_url, params: { graphics_processing_unit: { AfterMarketMake: @graphics_processing_unit.AfterMarketMake, ChipMake: @graphics_processing_unit.ChipMake, ChipModel: @graphics_processing_unit.ChipModel } }
+      post graphics_processing_units_url, params: { graphics_processing_unit: { aftermarketmake: @graphics_processing_unit.
+        aftermarketmake, chipmake: @graphics_processing_unit.chipmake, chipmodel: @graphics_processing_unit.chipmodel } }
     end
 
     assert_redirected_to graphics_processing_unit_url(GraphicsProcessingUnit.last)
@@ -34,7 +35,7 @@ class GraphicsProcessingUnitsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update graphics_processing_unit" do
-    patch graphics_processing_unit_url(@graphics_processing_unit), params: { graphics_processing_unit: { AfterMarketMake: @graphics_processing_unit.AfterMarketMake, ChipMake: @graphics_processing_unit.ChipMake, ChipModel: @graphics_processing_unit.ChipModel } }
+    patch graphics_processing_unit_url(@graphics_processing_unit), params: { graphics_processing_unit: { aftermarketmake: @graphics_processing_unit.aftermarketmake, chipmake: @graphics_processing_unit.chipmake, chipmodel: @graphics_processing_unit.chipmodel } }
     assert_redirected_to graphics_processing_unit_url(@graphics_processing_unit)
   end
 

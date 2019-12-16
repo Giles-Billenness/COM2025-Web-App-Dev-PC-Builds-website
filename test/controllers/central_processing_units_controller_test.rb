@@ -17,7 +17,7 @@ class CentralProcessingUnitsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create central_processing_unit" do
     assert_difference('CentralProcessingUnit.count') do
-      post central_processing_units_url, params: { central_processing_unit: { ChipMake: @central_processing_unit.ChipMake, ChipModel: @central_processing_unit.ChipModel } }
+      post central_processing_units_url, params: { central_processing_unit: { chipmake: @central_processing_unit.chipmake, chipmodel: @central_processing_unit.chipmodel } }
     end
 
     assert_redirected_to central_processing_unit_url(CentralProcessingUnit.last)
@@ -34,7 +34,7 @@ class CentralProcessingUnitsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update central_processing_unit" do
-    patch central_processing_unit_url(@central_processing_unit), params: { central_processing_unit: { ChipMake: @central_processing_unit.ChipMake, ChipModel: @central_processing_unit.ChipModel } }
+    patch central_processing_unit_url(@central_processing_unit), params: { central_processing_unit: { chipmake: @central_processing_unit.chipmake, chipmodel: @central_processing_unit.chipmodel } }
     assert_redirected_to central_processing_unit_url(@central_processing_unit)
   end
 

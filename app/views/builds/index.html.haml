@@ -36,7 +36,7 @@
       .col-md-3
         .image-frame
           %a{href: "/builds/#{build.id}"}
-            = image_tag(build.picture, size: "400x250", class: "build-show")
+            = image_tag(build.picture, size: "400x250", class: "build-show") if build.picture.attached?
             .image-caption
               %h2 #{build.title}
               #{CentralProcessingUnit.where(id: build.cpu_id).pluck(:chipmake, :chipmodel)[0]}
