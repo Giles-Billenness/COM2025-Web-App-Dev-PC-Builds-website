@@ -16,27 +16,20 @@
       = f.file_field :picture
 
     .field
-      -# - type = :ChipModel+:ChipMake  :formatted_select_text
-      -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
-      -# displays a dropdown menu to select a cpu storing its id
       = f.label t('builds.builds._form.cpu')
+      -# displays a dropdown menu to select a cpu storing its id
       = collection_select( :build, :cpu_id, CentralProcessingUnit.all, :id, :formatted_select_text_cpu)
 
     .field
-      -# - type = :ChipModel+:ChipMake  :formatted_select_text
-      -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
-      -# displays a dropdown menu to select a cpu storing its id
       = f.label t('builds.builds._form.gpu')
       = collection_select( :build, :gpu_id, GraphicsProcessingUnit.all, :id, :formatted_select_text_gpu)
 
     .field
-      -# - type = :ChipModel+:ChipMake  :formatted_select_text
-      -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
-      -# displays a dropdown menu to select a cpu storing its id
       = f.label t('builds.builds._form.ram')
       = collection_select( :build, :ram_id, RandomAccessMemory.all, :id, :formatted_select_text_ram)
     .field
       = f.label t('builds.builds._form.motherboard')
+      -# text field for the rest, could be easily adapted to have a table + relationship for all components but couldnt due to time constraints
       = f.text_field :motherboard
     .field
       = f.label t('builds.builds._form.cpu_cooler')
@@ -53,7 +46,7 @@
       = f.text_field :storage
     .field-hide
       =f.label :user_id
-      -# =f.select(:user_id=current_user.id)
+      -# only displays if the user isnt null/nil
       -if !(current_user.nil?)
         = f.select :user_id, [["Your user id", current_user.id]]
 

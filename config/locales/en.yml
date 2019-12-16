@@ -71,6 +71,10 @@ en:
         power_supply: "Power Supply:"
         storage: "Storage:"
         description: "Description:"
+        edit: 'Editing build'
+        index: "Listing builds"
+        new: "New build"
+
 
   gpus:
     saveprohib: "prohibited this graphics_processing_unit from being saved:"

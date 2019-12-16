@@ -1,8 +1,10 @@
 class BuildsController < ApplicationController
   before_action :set_build, only: [:show, :edit, :update, :destroy]
+  # so that only logged in users can make new builds and edit them
   before_action :authenticate_user!, only: [:new, :edit]
   # GET /builds
   # GET /builds.json
+  # shows all builds in the index
   def index
     @builds = Build.all
   end
@@ -15,18 +17,15 @@ class BuildsController < ApplicationController
   # GET /builds/new
   def new
     @build = Build.new
-    # @cpu = CentralProcessingUnit.all.map{|i| [i.chipmake, i.id]}
-    # @gpu = GraphicsProcessingUnit.all.map{|i| [i.chipmake, i.id]}
   end
 
   # GET /builds/1/edit
   def edit
-    # @cpu = CentralProcessingUnit.all.map{|i| [i.chipmake, i.id]}
-    # @gpu = GraphicsProcessingUnit.all.map{|i| [i.chipmake, i.id]}
   end
 
   # POST /builds
   # POST /builds.json
+  # creates the build and redirects to the new build once created
   def create
     @build = Build.new(build_params)
 
@@ -43,6 +42,7 @@ class BuildsController < ApplicationController
 
   # PATCH/PUT /builds/1
   # PATCH/PUT /builds/1.json
+  #updates a build using form and redirects once completed
   def update
     respond_to do |format|
       if @build.update(build_params)
@@ -57,6 +57,7 @@ class BuildsController < ApplicationController
 
   # DELETE /builds/1
   # DELETE /builds/1.json
+  #deletes an entry in builds table and redirects to builds index
   def destroy
     @build.destroy
     respond_to do |format|

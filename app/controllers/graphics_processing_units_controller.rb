@@ -3,6 +3,7 @@ class GraphicsProcessingUnitsController < ApplicationController
 
   # GET /graphics_processing_units
   # GET /graphics_processing_units.json
+  # shows all gpus in the index
   def index
     @graphics_processing_units = GraphicsProcessingUnit.all
   end
@@ -23,6 +24,7 @@ class GraphicsProcessingUnitsController < ApplicationController
 
   # POST /graphics_processing_units
   # POST /graphics_processing_units.json
+  # creates the gpu and redirects to the new gpu once created
   def create
     @graphics_processing_unit = GraphicsProcessingUnit.new(graphics_processing_unit_params)
 
@@ -39,6 +41,7 @@ class GraphicsProcessingUnitsController < ApplicationController
 
   # PATCH/PUT /graphics_processing_units/1
   # PATCH/PUT /graphics_processing_units/1.json
+  #updates a gpu using form and redirects once completed
   def update
     respond_to do |format|
       if @graphics_processing_unit.update(graphics_processing_unit_params)
@@ -53,6 +56,7 @@ class GraphicsProcessingUnitsController < ApplicationController
 
   # DELETE /graphics_processing_units/1
   # DELETE /graphics_processing_units/1.json
+  #deletes an entry in gpus table and redirects to gpu index
   def destroy
     @graphics_processing_unit.destroy
     respond_to do |format|

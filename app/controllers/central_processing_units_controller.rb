@@ -1,11 +1,9 @@
 class CentralProcessingUnitsController < ApplicationController
   before_action :set_central_processing_unit, only: [:show, :edit, :update, :destroy]
 
-  # def chipmake
-  #   @central_processing_units = CentralProcessingUnit.all.chipmake
-  # end
   # GET /central_processing_units
   # GET /central_processing_units.json
+  # shows all cpus in the index
   def index
     @central_processing_units = CentralProcessingUnit.all
   end
@@ -26,6 +24,7 @@ class CentralProcessingUnitsController < ApplicationController
 
   # POST /central_processing_units
   # POST /central_processing_units.json
+  # creates the cpu and redirects to the new cpu once created
   def create
     @central_processing_unit = CentralProcessingUnit.new(central_processing_unit_params)
 
@@ -42,6 +41,7 @@ class CentralProcessingUnitsController < ApplicationController
 
   # PATCH/PUT /central_processing_units/1
   # PATCH/PUT /central_processing_units/1.json
+  #updates a cpu using form and redirects once completed
   def update
     respond_to do |format|
       if @central_processing_unit.update(central_processing_unit_params)
@@ -56,6 +56,7 @@ class CentralProcessingUnitsController < ApplicationController
 
   # DELETE /central_processing_units/1
   # DELETE /central_processing_units/1.json
+  #deletes an entry in cpus table and redirects to cpu index
   def destroy
     @central_processing_unit.destroy
     respond_to do |format|

@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   def contact
   end
 
+  # sets perams of the email to the fields for the contact page
   def request_contact
     name=params[:name]
     email=params[:email]

@@ -8,10 +8,13 @@
     .build-info
       %h2.build-title=  @build.title
       %h2.build-author= "Made by user :#{User.where(id: @build.user_id).pluck(:email)[0]}"
+      -# gets the user email for the current build and displays it
       %h2.build-text
         %span Cpu:
+        -# if the cpuid or data is nil dont show the info
         -if !(@build.cpu_id.nil? || CentralProcessingUnit.where(id: @build.cpu_id).pluck(:chipmake, :chipmodel)[0].nil?)
           - (0..2).each do |i|
+            -#plucks the info from the other table using the stored id
             =CentralProcessingUnit.where(id: @build.cpu_id).pluck(:chipmake, :chipmodel)[0][i]
       %h2.build-text
         %span Gpu:
@@ -46,7 +49,8 @@
 %br
 .links.btn-group
   = link_to "Back", builds_path, :class => 'btn-custom2'
+  -# does a check for user signed in, only signed in users that made the build (or the admin account) can destroy or edit
 - if user_signed_in?
-  - if @build.user_id == current_user.id
+  - if @build.user_id == current_user.id ||current_user.id == User.where(email: "admin@builds.com").pluck(:id)[0]
     = link_to "Edit", edit_build_path(@build), :class => 'btn-custom2'
     = link_to "Delete", build_path(@build), method: :delete, data: { confirm: "Are you sure?" }, :class => 'btn-custom2'

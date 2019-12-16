@@ -20,13 +20,16 @@
           %a.nav-link{href: "http://localhost:3000/contact"} #{t('navbar.Contact')}
         %li.nav-item
           %a.nav-link{href: "http://localhost:3000/builds"} #{t('navbar.Builds')}
-        %li.nav-item.dropdown
-          %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", href: "#"}
-            #{t('navbar.Components')}
-          .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
-            %a.dropdown-item{href: "http://localhost:3000/graphics_processing_units"} #{t('navbar.gpu')}
-            %a.dropdown-item{href: "http://localhost:3000/central_processing_units"} #{t('navbar.cpu')}
-            %a.dropdown-item{href: "http://localhost:3000/random_access_memories"} #{t('navbar.ram')}
+          -# below sees if user is signed in and only displays the Component links if its the admin
+        - if user_signed_in?
+          - if current_user.id == User.where(email: "admin@builds.com").pluck(:id)[0]
+            %li.nav-item.dropdown
+              %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", href: "#"}
+                #{t('navbar.Components')}
+              .dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+                %a.dropdown-item{href: "http://localhost:3000/graphics_processing_units"} #{t('navbar.gpu')}
+                %a.dropdown-item{href: "http://localhost:3000/central_processing_units"} #{t('navbar.cpu')}
+                %a.dropdown-item{href: "http://localhost:3000/random_access_memories"} #{t('navbar.ram')}
         %p.navbar-text.float-right
           - if user_signed_in?
             #{t('navbar.Logged')}

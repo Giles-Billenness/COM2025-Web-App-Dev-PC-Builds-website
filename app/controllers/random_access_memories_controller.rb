@@ -3,6 +3,7 @@ class RandomAccessMemoriesController < ApplicationController
 
   # GET /random_access_memories
   # GET /random_access_memories.json
+  # shows all ram in the index
   def index
     @random_access_memories = RandomAccessMemory.all
   end
@@ -23,6 +24,7 @@ class RandomAccessMemoriesController < ApplicationController
 
   # POST /random_access_memories
   # POST /random_access_memories.json
+  # creates the ram and redirects to the new ram once created
   def create
     @random_access_memory = RandomAccessMemory.new(random_access_memory_params)
 
@@ -39,6 +41,7 @@ class RandomAccessMemoriesController < ApplicationController
 
   # PATCH/PUT /random_access_memories/1
   # PATCH/PUT /random_access_memories/1.json
+  #updates a ram using form and redirects once completed
   def update
     respond_to do |format|
       if @random_access_memory.update(random_access_memory_params)
@@ -53,6 +56,7 @@ class RandomAccessMemoriesController < ApplicationController
 
   # DELETE /random_access_memories/1
   # DELETE /random_access_memories/1.json
+  #deletes an entry in ram table and redirects to ram index
   def destroy
     @random_access_memory.destroy
     respond_to do |format|
