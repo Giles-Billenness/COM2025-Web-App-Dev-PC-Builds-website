@@ -2,6 +2,7 @@ class RandomAccessMemory < ApplicationRecord
   validates :rammake, presence: true
   validates :ddr, presence: true
   validates :mhz, presence: true
+  validates :size, presence: true
   has_many :Build
 
   enum ddr_types:{

@@ -19,4 +19,12 @@ end
   pc1.save #fix this one!!!!!!!!!!!!!!!!!!!!!!!
   assert pc1.valid?
 end
+
+test "should not save wrong input gpu" do
+pc1=GraphicsProcessingUnit.new
+pc1.aftermarketmake= 'Msi'
+pc1.chipmake = 'Nvidia'
+pc1.save
+refute pc1.valid?
+end
 end

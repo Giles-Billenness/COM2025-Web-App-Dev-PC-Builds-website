@@ -20,6 +20,8 @@ class BuildsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create build" do
+    @user=users(:one)
+    sign_in(@user)
     assert_difference('Build.count') do
       post builds_url, params: { build: { title: @build.title, cpu_id: @build.cpu_id, gpu_id: @build.gpu_id, description: @build.description, ram_id: @build.ram_id, motherboard: @build.motherboard, cpu_cooler: @build.cpu_cooler, case: @build.case,  power_supply: @build.power_supply, storage: @build.storage, user_id: @build.user_id} }
     end
@@ -40,6 +42,8 @@ class BuildsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update build" do
+    @user=users(:one)
+    sign_in(@user)
     patch build_url(@build), params: { build: { title: @build.title } }
     assert_redirected_to build_url(@build)
   end

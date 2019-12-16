@@ -1,7 +1,27 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Read about fixtures at http://apirubyonrailsorg/classes/ActiveRecord/FixtureSethtml
 
 one:
   title: MyString
+  cpu_id: 1
+  gpu_id : 1
+  description : 'description'
+  ram_id : 1
+  motherboard : "motherboard"
+  cpu_cooler : "cpu_cooler"
+  case : "case"
+  power_supply : "power_supply"
+  storage : "storage"
+  user_id: 1
 
 two:
-  title: MyString
+  title: MyString1
+  cpu_id: 2
+  gpu_id : 2
+  description : 'description1'
+  ram_id : 2
+  motherboard : "motherboard1"
+  cpu_cooler : "cpu_cooler1"
+  case : "case1"
+  power_supply : "power_supply1"
+  storage : "storage1"
+  user_id: 2

@@ -54,7 +54,8 @@
     .field-hide
       =f.label :user_id
       -# =f.select(:user_id=current_user.id)
-      = f.select :user_id, [["Your user id", current_user.id]]
+      -if !(current_user.nil?)
+        = f.select :user_id, [["Your user id", current_user.id]]
 
 
     .field
