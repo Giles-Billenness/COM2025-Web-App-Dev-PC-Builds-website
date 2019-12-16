@@ -54,3 +54,75 @@ en:
     request_contact:
       no_email: You must supply an email address
       email_sent: Thank you. We will be in touch shortly.
+
+  builds:
+    builds:
+      _form:
+        error: Error
+        saveprohib: "prohibited this build from being saved:"
+        title: "Title:"
+        pic: "Upload a Picture:"
+        cpu: "CPU:"
+        gpu: "GPU:"
+        ram: "Ram:"
+        motherboard: "Motherboard:"
+        cpu_cooler: "Cpu Cooler:"
+        case: "Case:"
+        power_supply: "Power Supply:"
+        storage: "Storage:"
+        description: "Description:"
+
+  gpus:
+    saveprohib: "prohibited this graphics_processing_unit from being saved:"
+    amm: "Aftermarketmake:"
+    cm: "Chipmake:"
+    cmm: "Chipmodel:"
+    new: "New GPU:"
+
+  cpus:
+    saveprohib: "prohibited this graphics_processing_unit from being saved:"
+    cm: "Chipmake:"
+    cmdl: "Chipmodel:"
+
+  contact_mailer:
+    dear: "Dear"
+    touch: "Could you get in touch with me please?"
+    name: "Name:"
+    email: "Email:"
+    phone: "Telephone:"
+    ty: "Thanks,"
+
+  navbar:
+    home: "Home"
+    Contact: Contact
+    Builds: Builds
+    Components: Components
+    gpu: Gpus
+    cpu: Cpus
+    ram: Rams
+
+    Logged: Logged in as
+    edit: 'Edit profile'
+    logut: "Logout"
+    sign: "Sign up"
+    login: "Login"
+
+  buildcon:
+    succreat: 'Build was successfully created.'
+    sucdes: 'Build was successfully destroyed.'
+    sucupd: 'Build was successfully updated.'
+
+  cpucon:
+    cpucreate: 'Central processing unit was successfully created.'
+    cpuupdt: 'Central processing unit was successfully updated.'
+    cpudest: 'Central processing unit was successfully destroyed.'
+
+  gpucon:
+    gpucreate: 'Graphics processing unit was successfully created.'
+    gpuupdt: 'Graphics processing unit was successfully updated.'
+    gpudest: 'Graphics processing unit was successfully destroyed.'
+
+  ramcon:
+    ramcreate: 'Random access memory was successfully created.'
+    ranudt: 'Random access memory was successfully updated.'
+    ramdest: 'Random access memory was successfully destroyed.'

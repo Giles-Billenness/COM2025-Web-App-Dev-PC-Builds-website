@@ -28,7 +28,7 @@ class RandomAccessMemoriesController < ApplicationController
 
     respond_to do |format|
       if @random_access_memory.save
-        format.html { redirect_to @random_access_memory, notice: 'Random access memory was successfully created.' }
+        format.html { redirect_to @random_access_memory, notice: t('ramcon.ramcreate')  }
         format.json { render :show, status: :created, location: @random_access_memory }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RandomAccessMemoriesController < ApplicationController
   def update
     respond_to do |format|
       if @random_access_memory.update(random_access_memory_params)
-        format.html { redirect_to @random_access_memory, notice: 'Random access memory was successfully updated.' }
+        format.html { redirect_to @random_access_memory, notice: t('ramcon.ranudt') }
         format.json { render :show, status: :ok, location: @random_access_memory }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class RandomAccessMemoriesController < ApplicationController
   def destroy
     @random_access_memory.destroy
     respond_to do |format|
-      format.html { redirect_to random_access_memories_url, notice: 'Random access memory was successfully destroyed.' }
+      format.html { redirect_to random_access_memories_url, notice: t('ramcon.ramdest') }
       format.json { head :no_content }
     end
   end

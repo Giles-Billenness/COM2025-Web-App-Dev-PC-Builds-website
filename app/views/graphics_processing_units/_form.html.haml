@@ -1,7 +1,7 @@
 = form_for @graphics_processing_unit do |f|
   - if @graphics_processing_unit.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@graphics_processing_unit.errors.count, "error")} prohibited this graphics_processing_unit from being saved:"
+      %h2= "#{pluralize(@graphics_processing_unit.errors.count, "error")} #{t('gpus.saveprohib')}"
       %ul
         - @graphics_processing_unit.errors.full_messages.each do |message|
           %li= message

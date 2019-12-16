@@ -1,13 +1,13 @@
 %p#notice= notice
 
 %p
-  %b Aftermarketmake:
+  %b #{t('gpus.amm')}
   = @graphics_processing_unit.aftermarketmake
 %p
-  %b Chipmake:
+  %b #{t('gpus.cm')}
   = @graphics_processing_unit.chipmake
 %p
-  %b Chipmodel:
+  %b #{t('gpus.cmm')}
   = @graphics_processing_unit.chipmodel
 
 = link_to 'Edit', edit_graphics_processing_unit_path(@graphics_processing_unit)

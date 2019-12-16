@@ -1,15 +1,15 @@
-%p="Dear #{t('app_title')},"
-%p="Could you get in touch with me please?"
+%p="#{t('contact_mailer.dear')} #{t('app_title')},"
+%p= {t('contact_mailer.touch')
 
 %dl
-  %dt Name:
+  %dt #{t('contact_mailer.name')}
   %dd= @name
-  %dt Email:
+  %dt #{t('contact_mailer.email')}
   %dd= @email
-  %dt Telephone:
+  %dt #{t('contact_mailer.phone')}
   %dd= @telephone
 
 %p= @message
 
-%p Thanks,
+%p #{t('contact_mailer.ty')}
 %p= @name

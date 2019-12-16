@@ -31,7 +31,7 @@ class CentralProcessingUnitsController < ApplicationController
 
     respond_to do |format|
       if @central_processing_unit.save
-        format.html { redirect_to @central_processing_unit, notice: 'Central processing unit was successfully created.' }
+        format.html { redirect_to @central_processing_unit, notice: t('cpucon.cpucreate') }
         format.json { render :show, status: :created, location: @central_processing_unit }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class CentralProcessingUnitsController < ApplicationController
   def update
     respond_to do |format|
       if @central_processing_unit.update(central_processing_unit_params)
-        format.html { redirect_to @central_processing_unit, notice: 'Central processing unit was successfully updated.' }
+        format.html { redirect_to @central_processing_unit, notice: t('cpucon.cpuupdt') }
         format.json { render :show, status: :ok, location: @central_processing_unit }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class CentralProcessingUnitsController < ApplicationController
   def destroy
     @central_processing_unit.destroy
     respond_to do |format|
-      format.html { redirect_to central_processing_units_url, notice: 'Central processing unit was successfully destroyed.' }
+      format.html { redirect_to central_processing_units_url, notice: t('cpucon.cpudest') }
       format.json { head :no_content }
     end
   end

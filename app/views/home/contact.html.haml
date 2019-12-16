@@ -3,7 +3,7 @@
 
 .new-build-form
   = form_tag request_contact_path, method:'post' do
-    = label_tag :name, t('.name')
+    = label_tag :name, t('home.contact.name')
     = text_field_tag :name, '', title: t('.enter_name'), size: 50, :class => 'center-block'
 
     = label_tag :email, t('.email')

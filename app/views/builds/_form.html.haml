@@ -2,51 +2,54 @@
   = form_for @build do |f|
     - if @build.errors.any?
       #error_explanation
-        %h2= "#{pluralize(@build.errors.count, "error")} prohibited this build from being saved:"
+        %h2= "#{pluralize(@build.errors.count, "error")} #{t('builds.builds._form.saveprohib')}"
         %ul
           - @build.errors.full_messages.each do |message|
             %li= message
 
     .field
-      = f.label :title
+      = f.label t('builds.builds._form.title')
       = f.text_field :title
 
     .field
-      = "upload a pic"
+      = f.label t('builds.builds._form.pic')
       = f.file_field :picture
 
     .field
       -# - type = :ChipModel+:ChipMake  :formatted_select_text
       -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
       -# displays a dropdown menu to select a cpu storing its id
+      = f.label t('builds.builds._form.cpu')
       = collection_select( :build, :cpu_id, CentralProcessingUnit.all, :id, :formatted_select_text_cpu)
 
     .field
       -# - type = :ChipModel+:ChipMake  :formatted_select_text
       -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
       -# displays a dropdown menu to select a cpu storing its id
+      = f.label t('builds.builds._form.gpu')
       = collection_select( :build, :gpu_id, GraphicsProcessingUnit.all, :id, :formatted_select_text_gpu)
 
     .field
       -# - type = :ChipModel+:ChipMake  :formatted_select_text
       -# =f.select :cpu_id, @cpus.collect{|d| [d.ChipMake, d.id]}
       -# displays a dropdown menu to select a cpu storing its id
+      = f.label t('builds.builds._form.ram')
       = collection_select( :build, :ram_id, RandomAccessMemory.all, :id, :formatted_select_text_ram)
     .field
-      = f.label :motherboard
+      = f.label t('builds.builds._form.motherboard')
       = f.text_field :motherboard
     .field
-      = f.label :cpu_cooler
+      = f.label t('builds.builds._form.cpu_cooler')
       = f.text_field :cpu_cooler
     .field
-      = f.label :case
+      = f.label t('builds.builds._form.case')
       = f.text_field :case
 
     .field
-      = f.label :power_supply
+      = f.label t('builds.builds._form.power_supply')
       = f.text_field :power_supply
     .field
-      = f.label :storage
+      = f.label t('builds.builds._form.storage')
       = f.text_field :storage
     .field-hide
       =f.label :user_id
@@ -55,7 +58,7 @@
 
 
     .field
-      = f.label :description
+      = f.label t('builds.builds._form.description')
       = f.text_field :description
 
     .actions

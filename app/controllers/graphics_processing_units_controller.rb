@@ -28,7 +28,7 @@ class GraphicsProcessingUnitsController < ApplicationController
 
     respond_to do |format|
       if @graphics_processing_unit.save
-        format.html { redirect_to @graphics_processing_unit, notice: 'Graphics processing unit was successfully created.' }
+        format.html { redirect_to @graphics_processing_unit, notice: t('gpucon.gpucreate') }
         format.json { render :show, status: :created, location: @graphics_processing_unit }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class GraphicsProcessingUnitsController < ApplicationController
   def update
     respond_to do |format|
       if @graphics_processing_unit.update(graphics_processing_unit_params)
-        format.html { redirect_to @graphics_processing_unit, notice: 'Graphics processing unit was successfully updated.' }
+        format.html { redirect_to @graphics_processing_unit, notice: t('gpucon.gpuupdt') }
         format.json { render :show, status: :ok, location: @graphics_processing_unit }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class GraphicsProcessingUnitsController < ApplicationController
   def destroy
     @graphics_processing_unit.destroy
     respond_to do |format|
-      format.html { redirect_to graphics_processing_units_url, notice: 'Graphics processing unit was successfully destroyed.' }
+      format.html { redirect_to graphics_processing_units_url, notice: t('gpucon.gpudest') }
       format.json { head :no_content }
     end
   end

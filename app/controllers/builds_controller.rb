@@ -32,7 +32,7 @@ class BuildsController < ApplicationController
 
     respond_to do |format|
       if @build.save
-        format.html { redirect_to @build, notice: 'Build was successfully created.' }
+        format.html { redirect_to @build, notice: t('buildcon.succreat') }
         format.json { render :show, status: :created, location: @build }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class BuildsController < ApplicationController
   def update
     respond_to do |format|
       if @build.update(build_params)
-        format.html { redirect_to @build, notice: 'Build was successfully updated.' }
+        format.html { redirect_to @build, notice: t('buildcon.sucupd') }
         format.json { render :show, status: :ok, location: @build }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class BuildsController < ApplicationController
   def destroy
     @build.destroy
     respond_to do |format|
-      format.html { redirect_to builds_url, notice: 'Build was successfully destroyed.' }
+      format.html { redirect_to builds_url, notice: t('buildcon.sucdes') }
       format.json { head :no_content }
     end
   end
