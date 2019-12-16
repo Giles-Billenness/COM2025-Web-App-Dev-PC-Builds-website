@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a ruby on rails website for modelling pc builds (Pc component lists).
+I have used HAML, JavaScript, Jquery and many more technologies in this project.
+The component tables are populated with seeds, however the build table is populated manually
 
-Things you may want to cover:
+To run: open terminal in the main dir (on machines that can run rails), execute "rails s" and navigate to localhost:3000.
+* Admin: admin@builds.com, password: password
 
-* Ruby version
+There are two accounts currently signed up:
 
-* System dependencies
+* Admin: admin@builds.com, password: password
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* User: test@email.com, password: password
