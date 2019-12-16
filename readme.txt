@@ -9,6 +9,8 @@ When loading the builds page, wait for it to fully load! Otherwise the Jquery sh
 
 To run: open terminal in the main dir (on machines that can run rails), execute "rails s" and navigate to "localhost:3000".
 
+This project is hosted on https://github.com/Giles-Billenness/COM2025
+
 There are two accounts currently signed up:
 
 * Admin: admin@builds.com, password: password
