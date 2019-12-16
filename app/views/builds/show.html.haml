@@ -56,16 +56,19 @@
       %h2.build-author= "Made by user :#{User.where(id: @build.user_id).pluck(:email)[0]}"
       %h2.build-text
         %span Cpu:
-        - (0..2).each do |i|
-          =CentralProcessingUnit.where(id: @build.cpu_id).pluck(:chipmake, :chipmodel)[0][i]
+        -if !(@build.cpu_id.nil?)
+          - (0..2).each do |i|
+            =CentralProcessingUnit.where(id: @build.cpu_id).pluck(:chipmake, :chipmodel)[0][i]
       %h2.build-text
         %span Gpu:
-        - (0..3).each do |i|
-          =GraphicsProcessingUnit.where(id: @build.gpu_id).pluck(:aftermarketmake, :chipmake, :chipmodel)[0][i]
+        -if !(@build.gpu_id.nil?)
+          - (0..3).each do |i|
+            =GraphicsProcessingUnit.where(id: @build.gpu_id).pluck(:aftermarketmake, :chipmake, :chipmodel)[0][i]
       %h2.build-text
         %span Ram:
-        - (0..3).each do |i|
-          =RandomAccessMemory.where(id: @build.ram_id).pluck(:rammake ,:ddr, :mhz, :size)[0][i]
+        -if !(@build.ram_id.nil?)
+          - (0..3).each do |i|
+            =RandomAccessMemory.where(id: @build.ram_id).pluck(:rammake ,:ddr, :mhz, :size)[0][i]
       %h3.build-text
         %span motherboard:
         =@build.motherboard

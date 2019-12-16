@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class BuildsControllerTest < ActionDispatch::IntegrationTest
+  #include Devise::Test::ControllerHelpers
+  include Devise::Test::IntegrationHelpers
   setup do
     @build = builds(:one)
   end
@@ -11,6 +13,8 @@ class BuildsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
+    @user=users(:one)
+    sign_in(@user)
     get new_build_url
     assert_response :success
   end
@@ -29,12 +33,14 @@ class BuildsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
+    @user=users(:one)
+    sign_in(@user)
     get edit_build_url(@build)
     assert_response :success
   end
 
   test "should update build" do
-    patch build_url(@build), params: { build: { title: @build.title, cpu_id: @build.cpu_id, gpu_id: @build.gpu_id, description: @build.description, ram_id: @build.ram_id, motherboard: @build.motherboard, cpu_cooler: @build.cpu_cooler, case: @build.case,  power_supply: @build.power_supply, storage: @build.storage, user_id: @build.user_id } }
+    patch build_url(@build), params: { build: { title: @build.title } }
     assert_redirected_to build_url(@build)
   end
 

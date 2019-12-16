@@ -44,6 +44,9 @@
               #{RandomAccessMemory.where(id: build.ram_id).pluck(:rammake ,:ddr, :mhz, :size)[0]}
 
 
+  %br
+  %br
+  %br
   = link_to 'New Build', new_build_path, :class => 'btn-custom2'
 -#
 -# -show_cpu_info(){
