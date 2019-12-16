@@ -30,13 +30,21 @@
 -# - if @books.count == 0
 -#   %h1 There are no books currently in this category
 -# - else
-.row
-  - @builds.each do |build|
-    .col-md-3
-      %a{href: "/builds/#{build.id}"}
-        = image_tag(build.picture, size: "400x250", class: "build-show")
+.build-image-show
+  .row
+    - @builds.each do |build|
+      .col-md-3
+        .image-frame
+          %a{href: "/builds/#{build.id}"}
+            = image_tag(build.picture, size: "400x250", class: "build-show")
+            .image-caption
+              %h2 #{build.title}
+              #{CentralProcessingUnit.where(id: build.cpu_id).pluck(:chipmake, :chipmodel)[0]}
+              #{GraphicsProcessingUnit.where(id: build.gpu_id).pluck(:aftermarketmake ,:chipmake, :chipmodel)[0]}
+              #{RandomAccessMemory.where(id: build.ram_id).pluck(:rammake ,:ddr, :mhz, :size)[0]}
 
-= link_to 'New Build', new_build_path, :class => 'btn-custom2'
+
+  = link_to 'New Build', new_build_path, :class => 'btn-custom2'
 -#
 -# -show_cpu_info(){
 -#   - (0..2).each do |i|

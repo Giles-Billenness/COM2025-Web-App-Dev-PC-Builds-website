@@ -156,7 +156,38 @@
 
  }
 
- /* Book styles */
+
+ .build-image-show{
+   .wrapper {
+    position: relative;
+    padding: 0;
+    width:100px;
+    display:block;
+}
+.text {
+    position: absolute;
+    top: 0;
+    color:#f00;
+    background-color:rgba(255,255,255,0.8);
+    width: 100px;
+    height: 100px;
+    line-height:100px;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.text:hover {
+    opacity:1;
+}
+}
+
+
+
+ /* Build styles */
 
  .build {
  	height: 350px;
@@ -292,4 +323,24 @@
 .center-block {
   margin: auto;
   display: block;
+
+}
+// -------------------------------------------------------------------
+.image-frame {
+	float: left;
+	position: relative;
+	margin: 5px;
+	color: #333;
+
+}
+.image-frame .image-caption {
+	display: none;
+	opacity: 0.8;
+	background:black;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	padding: 5px;
+  padding-bottom: 20px;
+  color: white;
 }
