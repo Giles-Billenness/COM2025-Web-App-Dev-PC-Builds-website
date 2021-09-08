@@ -47,7 +47,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
 
   #better errors!!!!!!
-  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'better_errors', '~> 2.8'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   #gem 'spring'
