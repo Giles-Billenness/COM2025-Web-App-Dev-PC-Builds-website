@@ -49,9 +49,11 @@ jobs:
       - name: fix active storage
         run: rails active_storage:update; rails db:migrate
 
+      - name: ENV test
+        run: rails db:migrate RAILS_ENV=test
       # Add or replace test runners here
       - name: Run tests
-        run: bin/rake
+        run: rake test
 
   lint:
     runs-on: ubuntu-latest
