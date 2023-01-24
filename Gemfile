@@ -18,6 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 
 # gem 'bundler', '>=2.4.5'
 gem 'bundler-audit', '>= 0.4.0'
+gem 'rubocop', '>=1.44.0'
+gem 'brakeman', '>=5.4.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
