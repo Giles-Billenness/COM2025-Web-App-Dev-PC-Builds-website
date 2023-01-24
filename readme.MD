@@ -6,7 +6,7 @@ Since being submitted this project has been:
 - updated to be able to be run in a docker container
 - added github actions workflow for CI/CD
 
-This is a ruby on rails website for modelling pc builds (Pc component lists).
+This is a ruby on rails website for modelling PC Builds (Pc component lists).
 I have used HAML, JavaScript, Jquery and many more technologies in this project.
 The component tables are populated with seeds, however the build table is populated manually.
 The admin account can see the component drop down menu and can edit/destroy any builds while only the user that created the build can usually only do this.
