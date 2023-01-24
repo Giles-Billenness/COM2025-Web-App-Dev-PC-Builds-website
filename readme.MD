@@ -1,6 +1,11 @@
 # (COM2025) University of Surrey - Computer Science - Year 2 - Web Coursework
 NOT BEING MAINTAINED - but should run in current state
 
+Since being submitted this project has been:
+- updated to use a newer version of rails and its dependencies
+- updated to be able to be run in a docker container
+- added github actions workflow for CI/CD
+
 This is a ruby on rails website for modelling pc builds (Pc component lists).
 I have used HAML, JavaScript, Jquery and many more technologies in this project.
 The component tables are populated with seeds, however the build table is populated manually.
