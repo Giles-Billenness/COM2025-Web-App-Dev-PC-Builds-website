@@ -37,7 +37,7 @@ jobs:
       # - run: bundle exec rake
       - name: Install Dependencies
         run: |
-          gem install bundler
+          gem install bundler:2.4.5
 
       - name: Install Gems
         run: |
