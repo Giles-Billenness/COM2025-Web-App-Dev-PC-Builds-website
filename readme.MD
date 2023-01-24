@@ -1,5 +1,5 @@
-# README
-
+# COM2025 Coursework
+NOT BEING MAINTAINED - but should run in current state
 This is a ruby on rails website for modelling pc builds (Pc component lists).
 I have used HAML, JavaScript, Jquery and many more technologies in this project.
 The component tables are populated with seeds, however the build table is populated manually.
