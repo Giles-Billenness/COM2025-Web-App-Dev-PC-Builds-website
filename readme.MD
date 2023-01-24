@@ -1,4 +1,4 @@
-# COM2025 Coursework
+# (COM2025) University of Surrey - Computer Science - Year 2 - Web Coursework
 NOT BEING MAINTAINED - but should run in current state
 
 This is a ruby on rails website for modelling pc builds (Pc component lists).
